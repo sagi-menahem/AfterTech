@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="docs/logo.webp" alt="AfterTech Logo" width="180" />
+  <img src="docs/logo-white.webp" alt="AfterTech Logo" width="180" />
   <h1>AfterTech</h1>
   <p>Boutique web agency landing page — Hebrew RTL, dark-mode, conversion-focused</p>
 
@@ -35,11 +35,11 @@
 
 ### Desktop
 
-<img src="docs/screenshots/desktop.png" alt="AfterTech desktop view" width="800" />
+<img src="docs/desktop.png" alt="AfterTech desktop view" width="800" />
 
 ### Mobile
 
-<img src="docs/screenshots/mobile.png" alt="AfterTech mobile view" width="300" />
+<img src="docs/mobile.png" alt="AfterTech mobile view" width="300" />
 
 </div>
 
