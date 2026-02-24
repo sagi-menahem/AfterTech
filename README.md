@@ -10,8 +10,8 @@
   <br /><br />
 
   <img src="https://img.shields.io/badge/Performance-90+-4ade80?style=flat-square&logo=lighthouse&logoColor=white" alt="Performance" />
-  <img src="https://img.shields.io/badge/Accessibility-90+-4ade80?style=flat-square" alt="Accessibility" />
-  <img src="https://img.shields.io/badge/Best%20Practices-90+-4ade80?style=flat-square" alt="Best Practices" />
+  <img src="https://img.shields.io/badge/Accessibility-100-4ade80?style=flat-square" alt="Accessibility" />
+  <img src="https://img.shields.io/badge/Best%20Practices-100-4ade80?style=flat-square" alt="Best Practices" />
   <img src="https://img.shields.io/badge/SEO-100-4ade80?style=flat-square" alt="SEO" />
 
   <br /><br />
