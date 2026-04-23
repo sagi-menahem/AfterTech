@@ -149,8 +149,8 @@ src/
 | Metric | Score |
 |--------|-------|
 | Performance | 90+ |
-| Accessibility | 90+ |
-| Best Practices | 90+ |
+| Accessibility | 100 |
+| Best Practices | 100 |
 | SEO | 100 |
 
 _Google PageSpeed Insights_
