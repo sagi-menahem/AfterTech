@@ -59,6 +59,18 @@ The page is built for conversion: it walks visitors through a clear narrative fr
 
 ---
 
+## How This Was Built
+
+Built solo, **AI-first**: I orchestrate AI coding agents (Claude Code, Codex) through a documented methodology rather than writing every line by hand — the engineering discipline is the point, not the speed.
+
+- **`AGENTS.md` as the single source of truth** — a rules file in the repo defines the architecture, conventions, and hard constraints every agent must obey: RTL logical-Tailwind-only rule (`ps-`/`pe-`/`ms-`/`me-`, never directional), all Hebrew copy centralized in `siteContent.ts` with no hardcoded strings in components, and a WCAG-compliant accessibility menu that must stay functional on every change.
+- **Guardrail scripts & audit pipelines** — automated checks run on every change (Lighthouse budgets of 90+ performance / 100 accessibility / 100 best-practices / 100 SEO, Three.js/particle-field performance and SSR-guard checks, image-CLS and self-hosted-font checks), so quality is enforced by tooling, not vigilance.
+- **The engineer decides, the agent executes** — every component, content model, and architectural choice on this page was designed and reviewed by me. Agents accelerate implementation; they never own the design.
+
+The result: a polished production site delivered at team-level velocity — with the discipline the decisions below reflect.
+
+---
+
 ## Key Features
 
 ### Design and UX
@@ -163,15 +175,12 @@ All Rights Reserved. This is a commercial project. Source code is not included i
 
 ---
 
-## Author
-
-**Sagi Menahem** — Full-Stack Developer
-
-[![GitHub](https://img.shields.io/badge/GitHub-sagi--menahem-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/sagi-menahem)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sagi-menahem/)
-
----
-
 <div align="center">
-  <strong>Interested in a similar project? <a href="https://www.linkedin.com/in/sagi-menahem/">Get in touch</a>.</strong>
+
+**Built by Sagi Menahem**
+
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/sagi-menahem)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sagi-menahem/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-0D2440?style=flat-square&logo=googlechrome&logoColor=white)](https://sagimenahem.tech)
+
 </div>
