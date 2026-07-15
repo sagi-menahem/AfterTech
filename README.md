@@ -47,7 +47,7 @@
 
 ## About the Project
 
-AfterTech is a single-page Hebrew (RTL) landing page for a boutique web agency serving Israeli small and medium-sized businesses. The site positions Shagee Menahem as a trusted technical partner — handling the complexity of modern web development so business owners can focus on running their business.
+AfterTech is a single-page Hebrew (RTL) landing page for a boutique web agency serving Israeli small and medium-sized businesses. The site positions Sagi Menahem as a trusted technical partner — handling the complexity of modern web development so business owners can focus on running their business.
 
 The page is built for conversion: it walks visitors through a clear narrative from the hero hook to transparent pricing, real client work, and a dual-form intake system. Every section is independently hydrated via Astro Islands Architecture, ensuring minimal JavaScript is delivered to the browser.
 
