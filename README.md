@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
   <img src="docs/logo-white.webp" alt="AfterTech Logo" width="180" />
   <h1>AfterTech</h1>
   <p>Boutique web agency landing page — Hebrew RTL, dark-mode, conversion-focused</p>
@@ -61,13 +61,7 @@ The page is built for conversion: it walks visitors through a clear narrative fr
 
 ## How This Was Built
 
-Built solo, **AI-first**: I orchestrate AI coding agents (Claude Code, Codex) through a documented methodology rather than writing every line by hand — the engineering discipline is the point, not the speed.
-
-- **`AGENTS.md` as the single source of truth** — a rules file in the repo defines the architecture, conventions, and hard constraints every agent must obey: RTL logical-Tailwind-only rule (`ps-`/`pe-`/`ms-`/`me-`, never directional), all Hebrew copy centralized in `siteContent.ts` with no hardcoded strings in components, and a WCAG-compliant accessibility menu that must stay functional on every change.
-- **Guardrail scripts & audit pipelines** — automated checks run on every change (Lighthouse budgets of 90+ performance / 100 accessibility / 100 best-practices / 100 SEO, Three.js/particle-field performance and SSR-guard checks, image-CLS and self-hosted-font checks), so quality is enforced by tooling, not vigilance.
-- **The engineer decides, the agent executes** — every component, content model, and architectural choice on this page was designed and reviewed by me. Agents accelerate implementation; they never own the design.
-
-The result: a polished production site delivered at team-level velocity — with the discipline the decisions below reflect.
+Built AI-first: I orchestrate AI coding agents (Claude Code, Codex) under guardrail scripts and audit pipelines that run on every change — but every component, content model, and architectural decision here was designed and reviewed by me. Agents accelerate implementation; they don't own the design.
 
 ---
 
