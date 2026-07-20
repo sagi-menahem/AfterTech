@@ -57,13 +57,6 @@ The page is built for conversion: it walks visitors through a clear narrative fr
 - Achieve 90+ Lighthouse scores across all four metrics
 - Support full accessibility with a persistent accessibility menu
 
----
-
-## How This Was Built
-
-Built AI-first: I orchestrate AI coding agents (Claude Code, Codex) under guardrail scripts and audit pipelines that run on every change — but every component, content model, and architectural decision here was designed and reviewed by me. Agents accelerate implementation; they don't own the design.
-
----
 
 ## Key Features
 
