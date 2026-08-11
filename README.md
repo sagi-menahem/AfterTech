@@ -1,30 +1,24 @@
-﻿<div align="center">
-  <img src="docs/logo-white.webp" alt="AfterTech Logo" width="180" />
-  <h1>AfterTech</h1>
-  <p>Boutique web agency landing page — Hebrew RTL, dark-mode, conversion-focused</p>
+<div align="center">
 
-  <br />
+# AfterTech
 
-  [![Live Site](https://img.shields.io/badge/Live%20Site-after--tech.co.il-10B981?style=for-the-badge)](https://www.after-tech.co.il/)
+**Boutique web agency landing page — Hebrew RTL, dark-mode, conversion-focused**
 
-  <br /><br />
+A single-page marketing site for an Israeli web development studio, built on Next.js 16's App Router as a fully static export — 16 pages of hand-tuned HTML, three rendering tiers, and CSS-driven scroll reveals that keep JavaScript off the sections that don't need it.
 
-  <img src="https://img.shields.io/badge/Performance-90+-4ade80?style=flat-square&logo=lighthouse&logoColor=white" alt="Performance" />
-  <img src="https://img.shields.io/badge/Accessibility-100-4ade80?style=flat-square" alt="Accessibility" />
-  <img src="https://img.shields.io/badge/Best%20Practices-100-4ade80?style=flat-square" alt="Best Practices" />
-  <img src="https://img.shields.io/badge/SEO-100-4ade80?style=flat-square" alt="SEO" />
+<br />
 
-  <br /><br />
+[![Live Site](https://img.shields.io/badge/Live%20Site-after--tech.co.il-10B981?style=for-the-badge)](https://www.after-tech.co.il)
 
-  [![Astro](https://img.shields.io/badge/Astro-5-BC52EE?style=flat-square&logo=astro&logoColor=white)](https://astro.build/)
-  [![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
-  [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
-  [![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000000?style=flat-square&logo=vercel&logoColor=white)](https://vercel.com/)
+<br /><br />
 
-  <br /><br />
+[![Next.js](https://img.shields.io/badge/Next.js-16-000000?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Three.js](https://img.shields.io/badge/Three.js-black?style=flat-square&logo=three.js&logoColor=white)](https://threejs.org/)
+[![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000000?style=flat-square&logo=vercel&logoColor=white)](https://vercel.com/)
 
-  > **Note:** This is a showcase repository. Source code is maintained in a private repository.
 </div>
 
 ---
@@ -45,120 +39,106 @@
 
 ---
 
-## About the Project
+## About
 
-AfterTech is a single-page Hebrew (RTL) landing page for a boutique web agency serving Israeli small and medium-sized businesses. The site positions Sagi Menahem as a trusted technical partner — handling the complexity of modern web development so business owners can focus on running their business.
-
-The page is built for conversion: it walks visitors through a clear narrative from the hero hook to transparent pricing, real client work, and a dual-form intake system. Every section is independently hydrated via Astro Islands Architecture, ensuring minimal JavaScript is delivered to the browser.
-
-### Goals
-- Establish credibility through technical depth and real portfolio work
-- Drive leads through two contact flows: quick inquiry and detailed intake questionnaire
-- Achieve 90+ Lighthouse scores across all four metrics
-- Support full accessibility with a persistent accessibility menu
-
-
-## Key Features
-
-### Design and UX
-- **Dark Mode Design System** — Single dark-mode-only theme with emerald green primary, cyan accent, and amber highlight palette built on CSS custom properties via Tailwind `@theme` block
-- **RTL Hebrew-First** — All layouts built with Tailwind logical properties (`ps-`, `pe-`, `ms-`, `me-`) for correct right-to-left rendering across all breakpoints. Self-hosted Heebo (variable 300–900) and David Libre typefaces with no external font requests
-- **Centralized Content** — All Hebrew copy, labels, and metadata live in `src/data/siteContent.ts`. No hardcoded strings in component files
-
-### Animations and 3D
-- **Aceternity-Style UI Library** — Custom animated primitives built in-house: bento grid, 3D pin, scroll-morph hero, card hover effects, tracing beam, focus cards, meteors, vortex background, and particle fields
-- **Centralized Animation Presets** — All Framer Motion variants, easing curves, duration constants, spring configs, and viewport helpers exported from `src/lib/animations.ts`. Components import presets rather than defining motion values inline
-- **Three.js 3D Elements** — Interactive 3D globe and procedural particle field via `@react-three/fiber` + `@react-three/drei`. Particle geometry uses simplex noise for organic movement. All 3D components guard against SSR with a mounted-state pattern
-
-### Technical
-- **Astro Islands Architecture** — Static HTML at build time with selective React hydration. Above-the-fold components use `client:load`; all remaining sections use `client:visible` and hydrate only on scroll into view
-- **Structured Data and SEO** — JSON-LD schemas: `Organization`, `ProfessionalService`, `WebSite`, and `FAQPage`. Automated sitemap, Open Graph metadata, and canonical URLs throughout
-- **Performance-First Build** — Explicit image dimensions preventing CLS, deferred hydration, CSS-only animations where possible, lazy-loading for all below-fold sections
-
-### Forms and Accessibility
-- **EmailJS Contact System** — Quick-inquiry form for general leads and a detailed intake questionnaire for project scoping. Both submit client-side via EmailJS with Israeli phone number validation — no backend required
-- **Floating Accessibility Menu** — Five independently toggleable display modes: grayscale, high contrast, enlarged text, link highlighting, and reduced motion. Preferences applied via CSS class toggling on the document body
+Built end-to-end as the sole engineer — the codebase itself is private; this README is the portfolio-facing summary covering the architecture, engineering decisions, and screenshots I can share publicly.
 
 ---
 
-## Page Sections
+## How This Was Built
 
-The single-page layout consists of nine sections:
+Built solo, **AI-first**: I orchestrate AI coding agents (Claude Code, Codex) through a documented methodology rather than writing every line by hand — the engineering discipline is the point, not the speed.
 
-| # | Section | Description |
-|---|---------|-------------|
-| 1 | **Hero** | Animated scroll-morph headline with dual CTA |
-| 2 | **Value Proposition** | Four-card bento grid showcasing core advantages |
-| 3 | **Expert** | Credentials, background, and portrait |
-| 4 | **Portfolio** | Client work showcase with device mockups |
-| 5 | **Process** | Five-step workflow with icons and timeline |
-| 6 | **Pricing** | Three tiers — Prime / Authority / Custom |
-| 7 | **Maintenance** | Post-launch support options |
-| 8 | **FAQ** | Nine accordion items addressing common objections |
-| 9 | **CTA** | Dual intake form with WhatsApp fallback |
+- **`AGENTS.md` as single source of truth**, read by every agent before it touches code — the real constraints it encodes here: every `<img>` carries explicit `width`/`height` with hand-measured srcsets (no `next/image`); all user-facing Hebrew text routes through one content module (`src/data/siteContent.ts`); and RTL layout uses only logical Tailwind properties (`ps-`/`pe-`/`ms-`/`me-`/`text-start`/`text-end`), never their physical twins.
+- **Guardrail scripts and audit pipelines that gate the deploy, not just advise it** — an SSR-visibility gate that fails the build on a single character of text shipped invisible; a build audit that greps the emitted HTML/CSS/JS chunks in `out/` for document order, for a `backdrop-filter` declaration pair a minifier once ate, and for the Motion runtime staying off the pages that carry no animation; a 16-page word-for-word token diff against the previous production build; and a Hebrew voice audit that fails on first-person-plural copy leaking into what should be a single founder's voice.
+- **The engineer decides.** Agents propose, measure, and implement; I make the calls that need judgment — what a Lighthouse regression is actually worth trading against a phone that feels smoother, when a "faithful port" should deviate from the source and when it shouldn't, and where a workaround is legitimate versus where it's a plaster over the real problem.
+
+The result: one engineer delivering a production system at team-level velocity — with the discipline the decisions below reflect.
+
+---
+
+## Highlights
+
+- **16 static pages**, `output: 'export'` — plain HTML on a CDN, no server, no lambda.
+- **9-section, single-document home page** verified at 23,396px tall, with 483 scroll-driven reveal elements confirmed by an automated audit gate (`audit-reveal-containers`) — the reveal path ships no JavaScript.
+- **Three rendering tiers, enforced deliberately**: zero-JS Server Components (ValueProposition, Expert, Process, Pricing, Maintenance, FAQ, Footer, the portfolio section and its five non-interactive cards, 5 detail pages), eager client components (Navbar, Hero, the five theme-switchable portfolio cards, CTA, 6 detail pages), and an idle-mounted tier (ChatWidget, FloatingActionButton) that defers to `requestIdleCallback` with a 2000ms timeout — load-bearing, because the hero's animation loop keeps the main thread busy enough that a bare idle callback never fires.
+- **Word-for-word text parity with the previous production build**, proven by stripping tags/scripts/styles from both builds and diffing tokens across all 16 pages — 16/16 match.
+- **Zero characters of SSR-hidden text**, enforced by `audit-ssr-visibility --max-chars 0` on every build; 22 sized images and 110 srcset candidates verified against their real files by `audit-image-ratios`.
+- **Lenis smooth-wheel scrolling, desktop-pointer-only**: `lerp 0.08`, gated to `(min-width: 1024px) and (pointer: fine)`, off under reduced motion, paused while the chat panel or nav menu is open.
+- **13-toggle accessibility panel** (grayscale, contrast, saturation, big cursor, large text, dyslexia font, and more) restored from `localStorage` before first paint and surviving in-site navigation.
+- **190 public assets and every srcset variant carried over intact**, with `content-visibility` intrinsic sizes hand-calibrated per viewport band and confirmed identical to the previous build, section by section.
 
 ---
 
 ## Tech Stack
 
-| Layer | Technology | Purpose |
-|-------|-----------|---------|
-| **Framework** | [Astro 5](https://astro.build/) | Static generation with partial hydration |
-| **UI** | [React 19](https://react.dev/) | Interactive component islands |
-| **Styling** | [Tailwind CSS 4](https://tailwindcss.com/) | Utility-first CSS with custom design tokens |
-| **Animation** | [Framer Motion](https://www.framer.com/motion/) | Scroll animations and micro-interactions |
-| **3D** | [Three.js](https://threejs.org/) + `@react-three/fiber` | 3D globe and particle effects |
-| **Noise** | `simplex-noise` | Procedural particle movement |
-| **Icons** | [Lucide React](https://lucide.dev/) | Consistent icon system |
-| **Forms** | `@emailjs/browser` | Client-side email delivery |
-| **Language** | [TypeScript 5](https://www.typescriptlang.org/) (strict) | Type-safe development |
-| **Deployment** | [Vercel](https://vercel.com/) | Edge deployment via `@astrojs/vercel` adapter |
-| **Sitemap** | `@astrojs/sitemap` | Automatic sitemap generation |
+| Layer | Choice |
+| --- | --- |
+| Framework | Next.js 16 (App Router, static export) |
+| UI | React 19 |
+| Styling | Tailwind CSS 4 |
+| Motion | `motion/react` + CSS scroll-driven animations |
+| 3D | three.js (one section) |
+| Language | TypeScript |
+| Hosting | Vercel |
+| Backend | The AfterTech client portal (chat + lead intake APIs) |
 
 ---
 
-## Architecture Highlights
+## Architecture
 
 ```
-src/
-├── data/siteContent.ts     <- Single source of truth for all Hebrew copy
-├── lib/
-│   ├── animations.ts       <- All Framer Motion presets (variants, easing, springs)
-│   └── utils.ts            <- cn() class merger (clsx + tailwind-merge)
-├── styles/global.css       <- @theme tokens, component utilities, keyframes
-├── components/
-│   ├── sections/           <- 9 page sections, barrel-exported
-│   ├── ui/                 <- Animated primitive library
-│   └── portfolio/          <- Portfolio detail components
-└── pages/index.astro       <- Hydration directives for all sections
+                     ┌───────────────────────────────┐
+                     │   out/  (static HTML/CSS/JS)   │
+                     │   next build -> output: 'export'│
+                     │   served from Vercel's CDN      │
+                     │   no server, no lambda          │
+                     └────────────────┬────────────────┘
+                                      │
+                       fetch() from the browser, client-side
+                                      │
+                                      ▼
+                     ┌───────────────────────────────┐
+                     │   AfterTech client portal       │
+                     │   app.after-tech.co.il          │
+                     │   (separate Next.js server app)  │
+                     │   chat streaming + 2 lead forms  │
+                     └───────────────────────────────┘
 ```
 
-**Hydration strategy:**
+The static site is the entire frontend; the client portal is its only backend, reached over `fetch` for the chat widget's streaming responses and for both lead-intake forms.
 
-| Strategy | Components |
-|----------|-----------|
-| `client:load` | Navbar, Hero, WhatsApp button, Scroll-to-top, Footer |
-| `client:visible` | All remaining sections |
-| `client:idle` | Floating accessibility button |
+The root layout (`src/app/layout.tsx`) wires five mechanisms that every page depends on:
 
----
-
-## Performance
-
-| Metric | Score |
-|--------|-------|
-| Performance | 90+ |
-| Accessibility | 100 |
-| Best Practices | 100 |
-| SEO | 100 |
-
-_Google PageSpeed Insights_
+1. **Accessibility-preference restore**, inlined in `<head>` before first paint, so a returning visitor never sees a flash of the wrong contrast/text-size settings.
+2. **`animationend` → `.rv-done` cleanup**, which removes a finished scroll-driven reveal from the compositor's active-animation list — without it, hundreds of long-finished reveals get serviced on the main thread every frame for the rest of the visit.
+3. **Hash-sync**, a mounted component (not a head script, since Next remounts pages rather than swapping documents) that keeps the URL hash in step with the section in view.
+4. **SEO — metadata, JSON-LD, and the sitemap**, generated from a single source of truth per page.
+5. **Lenis**, mounted and torn down with the page rather than rebuilt on a router event that doesn't exist here.
 
 ---
 
-## License
+## Engineering Decisions Worth Highlighting
 
-All Rights Reserved. This is a commercial project. Source code is not included in this repository.
+### Why static export
+
+The site is `output: 'export'` — plain files, no server, no lambda. That's what makes the audit pipeline possible: three scripts walk the actual built `out/` directory on every deploy and fail the build on a real regression, not a lint warning. A server-rendered site would still be correct, but it would remove the guarantee that what got audited is exactly what a visitor receives.
+
+### The hydration-tier problem
+
+The site was ported from the previous Astro build with word-for-word text parity, and the one piece that couldn't come across untouched was Astro's partial-hydration tier: sections hydrated only once they were within a measured distance of the viewport. React has no equivalent — its only hydration gate is a `<Suspense>` boundary, and a boundary wrapping a subtree of real size gets streamed to the end of `<body>` behind a relocation script rather than rendered in place. Three separate experiments (down to a single card, not a whole section) confirmed the same behavior, so the fix was architectural rather than a lazy-load trick: split components by rendering tier — zero-JS Server Components, eager client components, and an explicit idle-mount tier — instead of trying to reproduce a hydration gate that doesn't exist in this framework.
+
+### Splitting `DeviceMockup` to keep Motion off pages that don't need it
+
+A hooks-and-animation component that Astro could silently render to static HTML on non-interactive pages can't do that in React — any module that calls a hook has to be a client component, and a client component drags its whole dependency graph, animation runtime included, along with it. The fix was to split the component in two: a hook-free, animation-free version for the pages that don't animate, and a separate animated version for the ones that do. Net effect: the pages that carry no animation ship measurably less JavaScript than the previous build did.
+
+### The `backdrop-filter` `@supports` workaround
+
+The glass-effect navbar needs both a standard and a `-webkit-`-prefixed `backdrop-filter` declaration for full cross-browser support, and the build's own CSS minifier was silently collapsing the pair down to one — killing the effect everywhere except Safari. Disabling the minifier wholesale wasn't an option, since it would have changed the JS bundle too and contaminated the comparison this repo exists to make. Moving the prefixed declaration into its own `@supports` block sidesteps the minifier's same-purpose-declaration collapse entirely, because the two rules are no longer "the same purpose" as far as the optimizer can tell.
+
+### Judged by feel on device, not by Lighthouse alone
+
+A Lighthouse score and a phone in the hand disagreed on this build, and the phone won: the automated score read lower, but the site felt smoother scrolling below the hero. Where a defect was suspected but not obviously isolated in the code, the resolution method was to deploy several one-variable variants behind a query flag and rank them by hand on the actual device — which found (and ruled out) causes faster than reading the animation code would have, and caught a stuck-hero regression that turned out to predate this port entirely.
 
 ---
 
